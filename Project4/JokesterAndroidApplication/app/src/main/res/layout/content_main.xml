@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Name : Kanishka Bhambhani
+Andrew Id: kbhambha
+-->
+
+<!--
+The content_main.xml has all the fields and their configurations required by the user
+There is a scroll view in order to scroll through the page
+Checkboxes for blacklisting some data
+Dropdown to pick a category of joke
+There is a scroller to get the number of jokes required by the user
+A button that displays the jokes in a text view once pressed
+There is padding for all the fields and the text view has a border
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:text="Welcome to Jokester!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView"
+                    android:textStyle="bold" android:textAllCaps="false"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:paddingTop="10px"
+                    android:paddingBottom="10px"
+            />
+            <TextView
+                    android:text="Category:"
+                    android:layout_width="107dp"
+                    android:layout_height="30dp" android:id="@+id/textView2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <Spinner
+                    android:id="@+id/category"
+                    android:layout_width="239dp"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/category"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <TextView
+                    android:text="Avoid Following in jokes:"
+                    android:layout_width="277dp"
+                    android:layout_height="37dp" android:id="@+id/textView3"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <CheckBox
+                    android:text="Sexism"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" android:id="@+id/sexist"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:checked="true"/>
+            <CheckBox
+                    android:text="Explicit"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" android:id="@+id/explicit"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:paddingTop="10px"
+                    android:checked="true"/>
+            <CheckBox
+                    android:text="Religion"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" android:id="@+id/religious"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:checked="true"/>
+            <CheckBox
+                    android:text="Politics"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" android:id="@+id/political"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:checked="true"/>
+            <CheckBox
+                    android:text="Racism"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content" android:id="@+id/racist"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:checked="true"/>
+            <CheckBox
+                    android:text="NSFW"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content" android:id="@+id/nsfw"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:checked="true"/>
+            <TextView
+                    android:text="Joke Type:"
+                    android:layout_width="107dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView5"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <CheckBox
+                    android:text="Single"
+                    android:layout_width="111dp"
+                    android:layout_height="46dp" android:id="@+id/single"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <CheckBox
+                    android:text="Two Part"
+                    android:layout_width="114dp"
+                    android:layout_height="46dp" android:id="@+id/twopart"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <TextView
+                    android:text="Number of Jokes: 1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView4"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/amountOfJokes" android:max="5"
+                    android:indeterminate="false" android:min="1"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <Button
+                    android:text="Joke me up!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button"
+                    android:onClick="onJokeMeUp"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/jokes" android:visibility="invisible"
+                    android:textStyle="bold" android:textSize="20sp"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px"
+                    android:background="@drawable/textview_border"
+            />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
